@@ -1,17 +1,9 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFontAwesome } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
         <div className="bg-gray-800 text-white px-8 py-4">
             <p className='text-xl mb-6'>Journaling: a personal journey of growth and self-discovery.</p>
-
-            <div className="flex flex-row gap-6 mb-6">
-                <FontAwesomeIcon icon={faGithub} size='2xl' />
-                <FontAwesomeIcon icon={faLinkedin} size='2xl' />
-            </div>
 
             <div className="flex justify-center items-center gap-28 border-2 rounded-xl p-4 mb-6">
                 <div className='border-2 border-gray-800 p-4 rounded-xl w-80'>

@@ -1,9 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import dotenv from 'dotenv'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config()
+dotenv.config();
 
 export default defineConfig({
   plugins: [react()],
@@ -22,4 +22,4 @@ export default defineConfig({
       external: ['crypto-js', '@fortawesome/react-fontawesome', '@fortawesome/free-brands-svg-icons'],
     },
   },
-})
+});
