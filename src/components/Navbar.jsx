@@ -26,7 +26,7 @@ function Navbar() {
     return (
         <div className="flex flex-row justify-between items-center p-9 bg-[#26b7ff] h-[8px] text-white">
             <div className='flex flex-row justify-center items-center gap-5'> 
-                <img className='h-[60px] rounded-full' src="./assets/SoftwareHolic Logo.jpeg" alt="" />
+            <img className='h-[60px] rounded-full' src="../assets/SoftwareHolic Logo.jpeg" alt="SoftwareHolic Logo" />
                 <h1 className='text-3xl font-bold'>SoftwareHolic Journal</h1>
             </div>
             <ul className="flex flex-row gap-10">
