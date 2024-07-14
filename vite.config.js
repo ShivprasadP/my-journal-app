@@ -13,12 +13,13 @@ export default defineConfig({
   resolve: {
     alias: {
       'crypto-js': path.resolve(__dirname, 'node_modules/crypto-js'),
-      '@fortawesome/react-fontawesome': path.resolve(__dirname, 'node_modules/@fortawesome/react-fontawesome')
+      '@fortawesome/react-fontawesome': path.resolve(__dirname, 'node_modules/@fortawesome/react-fontawesome'),
+      '@fortawesome/free-brands-svg-icons': path.resolve(__dirname, 'node_modules/@fortawesome/free-brands-svg-icons'),
     },
   },
   build: {
     rollupOptions: {
-      external: ['crypto-js', '@fortawesome/react-fontawesome'],
+      external: ['crypto-js', '@fortawesome/react-fontawesome', '@fortawesome/free-brands-svg-icons'],
     },
   },
 })
