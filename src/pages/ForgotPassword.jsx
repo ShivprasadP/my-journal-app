@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Dropdown from '../components/Dropdown';
 import NewPassword from '../components/NewPassword';
-import { MD5 } from 'crypto-js';
 import { useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
@@ -13,7 +12,7 @@ const ForgotPassword = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [verifiedEmail, setVerifiedEmail] = useState('');
   const navigate = useNavigate();
-  const backendURL = process.env.REACT_APP_BACKEND_URL
+  const backendURL = process.env.REACT_APP_BACKEND_URL;
 
   const handleQuestionSelect = (question) => {
     setBackupQuestion(question);
@@ -62,7 +61,7 @@ const ForgotPassword = () => {
         },
         body: JSON.stringify({
           email: verifiedEmail,
-          newPassword: MD5(password).toString(),
+          newPassword: password, // Send plain text password
         }),
       });
 

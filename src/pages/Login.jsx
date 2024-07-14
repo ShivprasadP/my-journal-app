@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { MD5 } from 'crypto-js'
 import { useNavigate } from 'react-router-dom'
 
 function Login() {
@@ -8,7 +7,6 @@ function Login() {
   const [password, setPassword] = useState('')
 
   const backendURL = process.env.REACT_APP_BACKEND_URL
-
   const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
@@ -19,8 +17,6 @@ function Login() {
       return
     }
 
-    const hashedPassword = MD5(password).toString()
-
     try {
       const response = await fetch(`${backendURL}/users/login`, {
         method: 'POST',
@@ -29,7 +25,7 @@ function Login() {
         },
         body: JSON.stringify({
           email: email,
-          password: hashedPassword,
+          password: password, // Send password as plain text
         }),
       })
 
