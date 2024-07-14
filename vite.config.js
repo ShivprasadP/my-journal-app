@@ -17,7 +17,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['crypto-js', '@fortawesome/react-fontawesome', '@fortawesome/free-brands-svg-icons'],
+      external: ['crypto-js'],
     },
   },
 });
