@@ -108,7 +108,7 @@ function Signup() {
               <input type="text" name="user_backupQuestionAns" id="backupQuestionAns" className='form-input p-2 border border-black rounded-lg h-8' value={backupQuestionAns} onChange={(e) => setBackupQuestionAns(e.target.value)} placeholder='Enter your answer...' />
             </div>
             <div className="grid grid-cols-1 justify-items-end mt-6">
-              <p>Already have an Account? <a href="/login" className='text-blue-500 hover:text-blue-700'>Sign In!</a></p>
+              <p>Already have an Account? <Link to="/login" className='text-blue-500 hover:text-blue-700'>Sign In!</Link></p>
             </div>
 
             <div className="grid grid-cols-1 justify-items-center">
