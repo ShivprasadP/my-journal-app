@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -65,7 +66,7 @@ function Login() {
               <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter your Password...' className='form-input p-2 border border-black rounded-lg h-8' />
             </div>
             <div className="grid grid-cols-1 justify-items-end">
-              <a href="/forgot-password" className='text-blue-500 hover:text-blue-700'>Forgot Password?</a>
+              <Link to="/forgot-password" className='text-blue-500 hover:text-blue-700'>Forgot Password?</Link>
               <p>Don't have an Account? <a href="/register" className='text-blue-500 hover:text-blue-700'>Sign Up!</a></p>
             </div>
 
