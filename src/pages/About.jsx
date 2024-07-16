@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom'
+import aboutImg from '../assets/about.jpg'
 
 function About() {
 
@@ -17,7 +18,7 @@ function About() {
 
         <div className='flex flex-row mb-6'>
           <div className='flex flex-col w-3/6 place-items-center justify-center items-center'>
-            <img src='/src/assets/about.jpg' alt='Profile Image' className='rounded-lg h-[55%] w-[80%]' />
+            <img src={aboutImg} alt='Profile Image' className='rounded-lg h-[55%] w-[80%]' />
           </div>
           <div className='flex flex-col w-3/6 place-items-center  '>
             <h1 className='text-5xl font-medium m-5'>So, who am I?</h1>
