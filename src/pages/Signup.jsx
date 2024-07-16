@@ -84,7 +84,38 @@ function Signup() {
           </div>
           
           <form ref={form} onSubmit={handleSubmit}>
-            {/* Form fields */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2">
+                <label htmlFor="fullname" className='font-bold border-b-4 border-orange-200 py-1'>Full Name: <span style={{ color: 'red' }}>*</span></label>
+                <input type="text" name="user_fullname" id="fullname" value={fullname} onChange={(e) => setFullname(e.target.value)} placeholder='Enter your Full Name...' className='form-input p-2 border border-black rounded-lg h-8' />
+              </div>
+              <div className="grid grid-cols-2">
+                <label htmlFor="email" className='font-bold border-b-4 border-orange-200 py-1'>Email ID: <span style={{ color: 'red' }}>*</span></label>
+                <input type="email" name="user_email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your Email ID...' className='form-input p-2 border border-black rounded-lg h-8' />
+              </div>
+              <div className="grid grid-cols-2">
+                <label htmlFor='password' className='font-bold border-b-4 border-orange-200 py-1'>Password: <span style={{ color: 'red' }}>*</span></label>
+                <input type="password" name="user_password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter your Password...' className='form-input p-2 border border-black rounded-lg h-8' />
+              </div>
+              <div className="grid grid-cols-2">
+                <label htmlFor='confirmPassword' className='font-bold border-b-4 border-orange-200 py-1'>Confirm Password: <span style={{ color: 'red' }}>*</span></label>
+                <input type="password" name="user_confirmPassword" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='Enter your Confirm Password...' className='form-input p-2 border border-black rounded-lg h-8' />
+              </div>
+            </div>
+            <div className="grid grid-cols-3 mt-5 gap-3">
+              <label htmlFor='backupQuestion' className='font-bold border-b-4 border-orange-200 py-1'>Backup Question & Answer: <span style={{ color: 'red' }}>*</span></label>
+              <Dropdown onItemSelected={handleQuestionSelect}/>
+              <input type="text" name="user_backupQuestionAns" id="backupQuestionAns" className='form-input p-2 border border-black rounded-lg h-8' value={backupQuestionAns} onChange={(e) => setBackupQuestionAns(e.target.value)} placeholder='Enter your answer...' />
+            </div>
+            <div className="grid grid-cols-1 justify-items-end mt-6">
+              <p>Already have an Account? <a href="/login" className='text-blue-500 hover:text-blue-700'>Sign In!</a></p>
+            </div>
+
+            <div className="grid grid-cols-1 justify-items-center">
+              <button className="bg-blue-500 w-32 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-3 rounded">
+                Register
+              </button>
+            </div>
           </form>
         </div>
       </div>
