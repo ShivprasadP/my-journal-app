@@ -67,7 +67,7 @@ function Login() {
             </div>
             <div className="grid grid-cols-1 justify-items-end">
               <Link to="/forgot-password" className='text-blue-500 hover:text-blue-700'>Forgot Password?</Link>
-              <p>Don't have an Account? <a href="/register" className='text-blue-500 hover:text-blue-700'>Sign Up!</a></p>
+              <p>Don't have an Account? <Link to="/register" className='text-blue-500 hover:text-blue-700'>Sign Up!</Link></p>
             </div>
 
             <div className="grid grid-cols-1 justify-items-center">
