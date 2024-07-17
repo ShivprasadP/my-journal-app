@@ -9,9 +9,10 @@ function Card() {
   const [isEditing, setIsEditing] = useState(false)
   const [editedTitle, setEditedTitle] = useState('')
   const [editedContent, setEditedContent] = useState('')
+  const backendURL = process.env.REACT_APP_BACKEND_URL
 
   useEffect(() => {
-    fetch(`http://localhost:5000/journals/journal/${id}`)
+    fetch(`${backendURL}/journals/journal/${id}`)
       .then(response => response.json())
       .then(data => {
         setJournalEntry({
@@ -37,7 +38,7 @@ function Card() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/journals/journal/update/${id}`, {
+      const response = await fetch(`${backendURL}/journals/journal/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -63,7 +64,7 @@ function Card() {
     const confirmed = window.confirm('Are you sure you want to delete this journal entry?')
     if (confirmed) {
       try {
-        const response = await fetch(`http://localhost:5000/journals/journal/remove/${id}`, {
+        const response = await fetch(`${backendURL}/journals/journal/remove/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
